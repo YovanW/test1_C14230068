@@ -44,5 +44,12 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+        findViewById<android.view.View>(R.id.itemKegiatanSeminar).setOnClickListener {
+            val intent = Intent(
+                this@MainActivity,
+                DetailActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

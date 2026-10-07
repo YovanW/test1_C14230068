@@ -82,9 +82,8 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <!-- email (klik = kirim email) -->
         <LinearLayout
-            android:id="@+id/itemKegiatan"
+            android:id="@+id/itemKegiatanSeminar"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_marginBottom="8dp"
@@ -198,7 +197,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- phone (klik = telepon) -->
         <LinearLayout
             android:id="@+id/itemPhone"
             android:layout_width="match_parent"
@@ -314,7 +312,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- institution -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="140dp"
@@ -429,7 +426,6 @@
 
     </LinearLayout>
 
-    <!-- bottom navigation ez -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -443,6 +439,7 @@
             android:layout_width="175dp"
             android:layout_height="56dp"
             android:clickable="true"
+            android:focusable="true"
             android:background="@drawable/bg_card"
             android:id="@+id/about"
             android:orientation="horizontal">
