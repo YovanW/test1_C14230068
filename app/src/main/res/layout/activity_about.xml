@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -7,9 +8,8 @@
     android:background="#121212"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="MainActivity">
+    tools:context=".MainActivity">
 
-    <!-- top bar -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,11 +21,12 @@
             android:id="@+id/btnBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:clickable="true"
+            android:contentDescription="Kembali"
+            android:focusable="true"
             android:foreground="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:text="←"
-            android:clickable="true"
-            android:focusable="true"
             android:textColor="#FFFFFF"
             android:textSize="22sp" />
 
@@ -39,7 +40,6 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!-- penyeimbang agar judul tetap di tengah -->
         <View
             android:layout_width="40dp"
             android:layout_height="40dp" />
@@ -54,9 +54,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
 
-            <!-- header card -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -69,10 +69,10 @@
                     android:layout_width="84dp"
                     android:layout_height="84dp"
                     android:background="@drawable/bg_avatar"
+                    android:contentDescription="Foto profil"
                     android:padding="18dp"
                     android:src="@drawable/profile"
-                    app:tint="#5B4FE0"
-                    xmlns:app="http://schemas.android.com/apk/res-auto" />
+                    app:tint="#5B4FE0" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,7 +92,6 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- account Information -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -110,7 +109,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <!-- email (klik = kirim email) -->
                 <LinearLayout
                     android:id="@+id/itemEmail"
                     android:layout_width="match_parent"
@@ -127,6 +125,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
+                        android:contentDescription="Email"
                         android:src="@drawable/email" />
 
                     <LinearLayout
@@ -137,7 +136,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Email"
                             android:textColor="#9A9A9A"
@@ -145,15 +144,15 @@
 
                         <TextView
                             android:id="@+id/tvEmail"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="c14230068@john.petra.ac.id"
                             android:textColor="#121212"
                             android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- phone (klik = telepon) -->
                 <LinearLayout
                     android:id="@+id/itemPhone"
                     android:layout_width="match_parent"
@@ -170,6 +169,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
+                        android:contentDescription="Telepon"
                         android:src="@drawable/phone" />
 
                     <LinearLayout
@@ -180,7 +180,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Phone"
                             android:textColor="#9A9A9A"
@@ -188,19 +188,18 @@
 
                         <TextView
                             android:id="@+id/tvPhone"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="+62-851-0399-4924"
                             android:textColor="#121212"
                             android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- institution -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:background="@drawable/bg_item"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -209,6 +208,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
+                        android:contentDescription="NRP"
                         android:src="@drawable/id" />
 
                     <LinearLayout
@@ -219,7 +219,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="NRP"
                             android:textColor="#9A9A9A"
@@ -227,8 +227,9 @@
 
                         <TextView
                             android:id="@+id/tvInstitution"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
                             android:text="C14230068"
                             android:textColor="#121212"
                             android:textSize="15sp" />
@@ -240,7 +241,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="8dp"
                 android:text="Tentang Aplikasi"
                 android:textColor="#FFFFFF"
@@ -254,27 +255,19 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <LinearLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Campus Activity adalah aplikasi sederhana yang digunakan untuk menampilkan informasi kegiatan kampus seperti seminar, workshop, dan event lainnya."
-                            android:textColor="#FFFFFF"
-                            android:textSize="15sp" />
-
-                </LinearLayout>
-
+                    android:lineSpacingExtra="4dp"
+                    android:text="Campus Activity adalah aplikasi sederhana yang digunakan untuk menampilkan informasi kegiatan kampus seperti seminar, workshop, dan event lainnya."
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="8dp"
                 android:text="Fitur Aplikasi"
                 android:textColor="#FFFFFF"
@@ -291,45 +284,115 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="•"
+                        android:textColor="#D8D4FF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
                         android:text="Melihat daftar kegiatan kampus"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Melihat detail k"
-                        android:textColor="#FFFFFF"
+                        android:text="•"
+                        android:textColor="#D8D4FF"
                         android:textSize="15sp" />
 
                     <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Melihat detail kegiatan"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="•"
+                        android:textColor="#D8D4FF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
                         android:text="Menghubungi panitia kegiatan"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="•"
+                        android:textColor="#D8D4FF"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
                         android:text="Menghubungi developer"
                         android:textColor="#FFFFFF"
                         android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dibangun menggunakan kotlin dan android studio"
-                        android:textColor="#FFFFFF"
+                        android:text="•"
+                        android:textColor="#D8D4FF"
                         android:textSize="15sp" />
 
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="Dibangun menggunakan Kotlin dan Android Studio"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
                 </LinearLayout>
 
             </LinearLayout>
